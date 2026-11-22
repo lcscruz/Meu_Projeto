@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Cruz | Quantitative Developer & Algorithmic Trading</title>
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --bg-card: #131b2e;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --border: #1e293b;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            padding: 80px 0 50px;
+            border-bottom: 1px solid var(--border);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 720px;
+            margin-bottom: 30px;
+        }
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background-color: var(--accent);
+            color: #022c22;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            color: #ffffff;
+        }
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            background: var(--bg-card);
+        }
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .tag {
+            background: #1e293b;
+            color: #cbd5e1;
+            font-size: 0.78rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .card-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .card-link:hover {
+            text-decoration: underline;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .skill-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .workflow-box {
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 10px;
+            padding: 24px;
+            color: var(--text-main);
+        }
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            header { padding: 50px 0 35px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="badge">Harvard CS50 Certified • Quantitative Developer</div>
+            <h1>Luis Cruz</h1>
+            <p class="subtitle">
+                Mathematician and Quantitative Developer specializing in <strong>MetaTrader 5 (MQL5)</strong> trading bots, 
+                <strong>C & Python</strong> financial modeling, and algorithmic strategy automation.
+            </p>
+            <div class="cta-group">
+                <!-- TROQUE OS SÍMBOLOS # PELOS LINKS DOS SEUS PERFIS QUANDO ESTIVEREM PRONTOS -->
+                <a href="#" class="btn btn-primary" target="_blank">Hire on Upwork</a>
+                <a href="#" class="btn btn-outline" target="_blank">Order on Fiverr</a>
+                <a href="#" class="btn btn-outline" target="_blank">MQL5 Freelance</a>
+                <a href="https://certificates.cs50.io/5eacf917-f218-452f-94dc-ed52b8773664.pdf?size=letter" class="btn btn-outline" target="_blank">Verify Harvard CS50</a>
+            </div>
+        </header>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="grid">
+                
+                <!-- Projeto 1 -->
+                <div class="card">
+                    <div>
+                        <h3>Options Payoff Calculator (CLI)</h3>
+                        <p>
+                            High-performance command-line application built in C for pricing and simulating multi-leg options structures (e.g., Bull Call Spreads). Implements Black-Scholes logic, dynamic memory allocation, and payoff matrix generation.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Black-Scholes</span>
+                            <span class="tag">Derivatives</span>
+                            <span class="tag">Harvard CS50</span>
+                        </div>
+                    </div>
+                    <!-- TROQUE # PELO LINK DO REPOSITÓRIO DESSE PROJETO NO SEU GITHUB -->
+                    <a href="#" class="card-link" target="_blank">View Code on GitHub &rarr;</a>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="card">
+                    <div>
+                        <h3>Algorithmic Trading EAs & Indicators</h3>
+                        <p>
+                            Custom Expert Advisors (EAs) and technical indicators for MetaTrader 5 (MQL5) and ProfitChart (NTSL). Features automated risk management, statistical filters, and strategy conversion between platforms.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">MQL5</span>
+                            <span class="tag">MetaTrader 5</span>
+                            <span class="tag">NTSL</span>
+                            <span class="tag">Risk Management</span>
+                        </div>
+                    </div>
+                    <!-- TROQUE # PELO LINK DO REPOSITÓRIO OU PERFIL MQL5 -->
+                    <a href="#" class="card-link" target="_blank">View MQL5 Portfolio &rarr;</a>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="card">
+                    <div>
+                        <h3>Financial Simulation & Data Scripts</h3>
+                        <p>
+                            Full-stack stock trading simulator and custom Python/SQL automation scripts for financial data processing, quantitative backtesting, and lightweight web calculators.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">HTML/CSS/JS</span>
+                        </div>
+                    </div>
+                    <!-- TROQUE # PELO LINK DO REPOSITÓRIO NO GITHUB -->
+                    <a href="#" class="card-link" target="_blank">View Code on GitHub &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Core Technical Stack</h2>
+            <div class="skills-list">
+                <div class="skill-item">MQL5 / MetaTrader 5</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">C Programming</div>
+                <div class="skill-item">Quantitative Modeling</div>
+                <div class="skill-item">Options & Futures</div>
+                <div class="skill-item">SQL / SQLite</div>
+                <div class="skill-item">ProfitChart (NTSL)</div>
+                <div class="skill-item">HTML / CSS / JS</div>
+            </div>
+        </section>
+
+        <section id="workflow">
+            <h2>How I Work</h2>
+            <div class="workflow-box">
+                <p>
+                    <strong>100% Written, Objective, and Audited:</strong> No unnecessary meetings. Send your clear technical specifications in writing, and I will deliver clean, thoroughly tested, and audited code on schedule.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Luis Cruz — Quantitative Developer. Built with pure HTML & CSS.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
